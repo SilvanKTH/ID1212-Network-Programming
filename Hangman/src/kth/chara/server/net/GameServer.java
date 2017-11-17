@@ -36,7 +36,7 @@ public class GameServer {
     private void listenSocket() {
         try (ServerSocket socket = new ServerSocket(port)) {
             while (true) {
-                System.out.println("Listening players...");
+                System.out.println("Listening players in port: " + port);
                 Socket player = socket.accept(); // Blocking
                 handlePlayer(player);
             }
