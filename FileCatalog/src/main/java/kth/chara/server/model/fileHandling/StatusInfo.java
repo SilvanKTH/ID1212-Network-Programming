@@ -1,4 +1,4 @@
-package kth.chara.server.model;
+package kth.chara.server.model.fileHandling;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.List;
  * Handles the lists for file information purposes.
  */
 
-class StatusInfo {
+public class StatusInfo {
     private String filename;
     private String owner;
     private List<String> updateList;
@@ -22,7 +22,7 @@ class StatusInfo {
         this.retrieveList = new ArrayList<>();
     }
 
-    String getFilename() {return filename;}
+    public String getFilename() {return filename;}
 
     String getOwner() {return owner;}
 

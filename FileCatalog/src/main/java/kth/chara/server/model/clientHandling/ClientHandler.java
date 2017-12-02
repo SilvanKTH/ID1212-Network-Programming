@@ -1,4 +1,4 @@
-package kth.chara.server.model;
+package kth.chara.server.model.clientHandling;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -32,7 +32,7 @@ public class ClientHandler implements Serializable {
     @Column(name = "PASSWORD", nullable = false, length = 20)
     private String password;
 
-    public ClientHandler(String username, String password){
+    ClientHandler(String username, String password){
         this.username = username;
         this.password = password;
     }
@@ -53,7 +53,7 @@ public class ClientHandler implements Serializable {
         this.username = username;
     }
 
-    public String getPassword() {return password;}
+    String getPassword() {return password;}
 
     public void setPassword(String password) {
         this.password = password;

@@ -2,7 +2,12 @@ package kth.chara.server.controller;
 
 import kth.chara.common.FilesCatalog;
 import kth.chara.common.ProcessInput;
-import kth.chara.server.model.*;
+import kth.chara.server.model.clientHandling.ClientException;
+import kth.chara.server.model.clientHandling.ClientHandler;
+import kth.chara.server.model.clientHandling.ClientsInputProcess;
+import kth.chara.server.model.clientHandling.ClientsSystem;
+import kth.chara.server.model.fileHandling.FileException;
+import kth.chara.server.model.fileHandling.FilesSystem;
 import kth.chara.server.net.FileTransfer;
 
 import java.io.IOException;

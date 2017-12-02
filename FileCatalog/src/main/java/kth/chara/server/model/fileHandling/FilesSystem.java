@@ -1,6 +1,7 @@
-package kth.chara.server.model;
+package kth.chara.server.model.fileHandling;
 
 import kth.chara.server.integration.FileSystemDAO;
+import kth.chara.server.model.clientHandling.ClientHandler;
 
 
 import java.io.File;
@@ -178,6 +179,4 @@ public class FilesSystem {
             statusInfos.add(statusInfo);
         }
     }
-
-
 }

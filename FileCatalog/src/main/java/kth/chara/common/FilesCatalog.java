@@ -1,7 +1,7 @@
 package kth.chara.common;
 
-import kth.chara.server.model.ClientException;
-import kth.chara.server.model.FileException;
+import kth.chara.server.model.clientHandling.ClientException;
+import kth.chara.server.model.fileHandling.FileException;
 
 import java.io.IOException;
 import java.rmi.Remote;

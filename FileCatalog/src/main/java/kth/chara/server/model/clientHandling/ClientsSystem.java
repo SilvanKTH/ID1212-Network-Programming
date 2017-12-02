@@ -1,6 +1,8 @@
-package kth.chara.server.model;
+package kth.chara.server.model.clientHandling;
 
 import kth.chara.server.integration.FileSystemDAO;
+import kth.chara.server.model.clientHandling.ClientException;
+import kth.chara.server.model.clientHandling.ClientHandler;
 
 import java.util.*;
 

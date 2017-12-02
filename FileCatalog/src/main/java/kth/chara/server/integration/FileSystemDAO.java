@@ -1,12 +1,11 @@
 package kth.chara.server.integration;
 
-import kth.chara.server.model.ClientException;
-import kth.chara.server.model.ClientHandler;
-import kth.chara.server.model.FileException;
-import kth.chara.server.model.FilesEntity;
+import kth.chara.server.model.clientHandling.ClientException;
+import kth.chara.server.model.clientHandling.ClientHandler;
+import kth.chara.server.model.fileHandling.FileException;
+import kth.chara.server.model.fileHandling.FilesEntity;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.List;
 
 /**

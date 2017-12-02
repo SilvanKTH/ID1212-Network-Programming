@@ -2,8 +2,8 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="persistenceUnitFilesystem">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>kth.chara.server.model.ClientHandler</class>
-        <class>kth.chara.server.model.FilesEntity</class>
+        <class>kth.chara.server.model.clientHandling.ClientHandler</class>
+        <class>kth.chara.server.model.fileHandling.FilesEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/derbyDB"/>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>

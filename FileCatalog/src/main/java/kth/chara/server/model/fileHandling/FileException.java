@@ -1,4 +1,4 @@
-package kth.chara.server.model;
+package kth.chara.server.model.fileHandling;
 
 /**
  * Handles the case of file exception.

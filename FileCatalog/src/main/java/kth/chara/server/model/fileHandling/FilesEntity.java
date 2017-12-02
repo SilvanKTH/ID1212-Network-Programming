@@ -1,4 +1,6 @@
-package kth.chara.server.model;
+package kth.chara.server.model.fileHandling;
+
+import kth.chara.server.model.clientHandling.ClientHandler;
 
 import javax.persistence.*;
 

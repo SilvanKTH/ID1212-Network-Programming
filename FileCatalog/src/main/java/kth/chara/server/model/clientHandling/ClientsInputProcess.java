@@ -1,7 +1,8 @@
-package kth.chara.server.model;
+package kth.chara.server.model.clientHandling;
 
 import kth.chara.common.Commands;
 import kth.chara.common.ProcessInput;
+import kth.chara.server.model.clientHandling.ClientException;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
