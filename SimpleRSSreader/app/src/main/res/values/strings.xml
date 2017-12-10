@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SimpleRSSreader</string>
+    <string name="start">start</string>
+    <string name="search">search</string>
+    <string name="type_rss_url">Type rss url</string>
+    <string name="welcomeRss">A simple RSS Reader. Just type the url of the feed and press FETCH.</string>
+    <string name="appInfo">An app created for the purposes of ID1212-Network Programming, KTH</string>
+</resources>

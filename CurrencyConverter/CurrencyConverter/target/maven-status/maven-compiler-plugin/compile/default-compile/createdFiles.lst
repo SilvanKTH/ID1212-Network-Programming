@@ -1,0 +1,7 @@
+com\charalav\currencyconverter\model\Converter.class
+com\charalav\currencyconverter\view\NumberValidator.class
+com\charalav\currencyconverter\integration\ConverterDAO.class
+com\charalav\currencyconverter\view\ConverterManager.class
+com\charalav\currencyconverter\controller\ConverterController.class
+com\charalav\currencyconverter\model\ConverterDTO.class
+com\charalav\currencyconverter\model\Converter_.class

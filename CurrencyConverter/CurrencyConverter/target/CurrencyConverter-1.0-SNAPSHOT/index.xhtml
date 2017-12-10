@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Currency Converter App</title>
+    </h:head>
+    <h1>Currency Converter</h1>
+    <h:body>
+        <h:form>
+            <h3>Add the value of 1 SEK to: </h3>
+            <p>
+                <h:outputLabel for="sekeuro" value="EURO (0.1): "/> 
+                <h:inputText id="sekeuro"  value="#{converterManager.rateEuro}">
+                    <f:validator validatorId="numberValidator" />
+                </h:inputText>
+                &nbsp;
+                <h:outputLabel for="sekusd" value="USD (0.12): "/>
+                <h:inputText id="sekusd" value="#{converterManager.rateUsd}">
+                    <f:validator validatorId="numberValidator" />
+                </h:inputText>
+                &nbsp;
+                <h:outputLabel for="sekgbp" value="GBP (0.088): "/>
+                <h:inputText id="sekgbp" value="#{converterManager.rateGbp}">
+                    <f:validator validatorId="numberValidator" />
+                </h:inputText>
+            </p>
+            <p>
+                <h:commandButton value="Send" action="#{converterManager.storeRates}"/>
+            </p>
+        </h:form>    
+        <hr/>
+        <h:form>
+            <h3>
+                <h:outputLabel for="amount" value="Amount to convert: "/> 
+                <h:inputText id="amount"  value="#{converterManager.amountToConvert}" >
+                    <f:validator validatorId="numberValidator" />
+                </h:inputText>
+            </h3>
+            <h3>From:</h3>
+            <p>
+                <h:selectOneMenu value = "#{converterManager.fromCur}"> 
+                    <f:selectItem itemValue = "euro" itemLabel = "EURO" /> 
+                    <f:selectItem itemValue = "usd" itemLabel = "USD" />
+                    <f:selectItem itemValue = "gbp" itemLabel = "GBP" /> 
+                    <f:selectItem itemValue = "sek" itemLabel = "SEK" /> 
+                </h:selectOneMenu>
+            </p>
+            <h3>To:</h3>
+            <p>
+                <h:selectOneMenu value = "#{converterManager.toCur}"> 
+                    <f:selectItem itemValue = "euro" itemLabel = "EURO" /> 
+                    <f:selectItem itemValue = "usd" itemLabel = "USD" />
+                    <f:selectItem itemValue = "gbp" itemLabel = "GBP" /> 
+                    <f:selectItem itemValue = "sek" itemLabel = "SEK" /> 
+                </h:selectOneMenu>
+            </p>
+            <p>
+                <h:commandButton value="Convert" action="#{converterManager.startConversion}"/>
+            </p>
+        </h:form>    
+        <hr/>
+        <h3>Results</h3>
+        <p>
+            <h:outputLabel for="fromProcess" rendered="#{converterManager.convertedAmount != null}"  value="From: "/>
+            <h:outputText id="fromProcess" value="#{converterManager.fromCur}"/> &nbsp;
+            <h:outputLabel for="toProcess" rendered="#{converterManager.convertedAmount != null}"  value="To: "/>
+            <h:outputText id="toProcess" value="#{converterManager.toCur}"/> 
+        </p>
+        <p>
+            <h:outputLabel for="currResult" rendered="#{converterManager.convertedAmount != null}"  value="Converted Amount: "/>
+            <h:outputText id="currResult" value="#{converterManager.convertedAmount}"/>
+            <h:outputText rendered="#{converterManager.convertedAmount == null}"  value="Nothing to show yet!"/>       
+        </p>
+    </h:body>
+</html>
+
