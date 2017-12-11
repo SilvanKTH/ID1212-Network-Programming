@@ -99,9 +99,6 @@ public class ConverterManager implements Serializable {
     }
     
     public void setRateEuro(double rateEuro) {
-        if (rateEuro <= 0) {
-            
-        }
         this.rateEuro = rateEuro;
     }
     
