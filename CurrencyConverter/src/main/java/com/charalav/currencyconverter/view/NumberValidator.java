@@ -30,13 +30,13 @@ public class NumberValidator implements Validator {
 
         try {
             if (new BigDecimal(value.toString()).signum() < 1) {
-                FacesMessage msg = new FacesMessage("Validation failed.",
+                FacesMessage msg = new FacesMessage("Validation failed." +
                         "Number must be strictly positive");
                 msg.setSeverity(FacesMessage.SEVERITY_ERROR);
                 throw new ValidatorException(msg);
             }
         } catch (NumberFormatException ex) {
-            FacesMessage msg = new FacesMessage("Validation failed.", "Not a number");
+            FacesMessage msg = new FacesMessage("Validation failed. Not a number");
             msg.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(msg);
         }
