@@ -55,7 +55,7 @@ public class PlayerUI implements Runnable{
                             controller.startGame(id, new ServerResponse());
                             break;
                         case PLAY:
-                            controller.playMove(id, processCmd.getMsgBody(), new ServerResponse());
+                            controller.playMove(id, processCmd.getMsgBody());
                             break;
                         case QUIT:
                             newInput = false;
